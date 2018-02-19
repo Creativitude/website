@@ -1,0 +1,25 @@
+{
+  "name": "creativitude",
+  "version": "0.0.1",
+  "description": "creativitude website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Creativitude/website.git"
+  },
+  "author": "Creativitude Technologies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Creativitude/website/issues"
+  },
+  "homepage": "https://github.com/Creativitude/website#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
