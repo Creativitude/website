@@ -27,10 +27,10 @@
     jQuery(document).ready(function($){
 	'use strict';
       	jQuery('body').backstretch([
-	        "http://placehold.it/800x600",
-	        "http://placehold.it/800x600",
-	        "http://placehold.it/800x600"
-	    ], {duration: 5000, fade: 500});
+	        "images/bg/bg1.jpg",
+	        "images/bg/bg2.jpg",
+	        "images/bg/bg3.jpg"
+	    ], {duration: 5000, fade: 500, centeredY: true });
 
 		$("#mapwrapper").gMap({ controls: false,
          	scrollwheel: false,
@@ -54,29 +54,31 @@
 </head><!--/head-->
 <body>
 <div id="preloader"></div>
-    <header class="navbar navbar-inverse navbar-fixed-top opaqued" role="banner">
-    <div id="search-wrapper">
-        <div class="container">
-            <input id="search-box" placeholder="Search">
-        </div>
-    </div>
+    <header class="navbar navbar-inverse navbar-fixed-top " role="banner">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html"><h1><span class="pe-7s-gleam bounce-in"></span> IMPACT</h1></a>
+                 <a class="navbar-brand" href="index.html"><h1><span class="pe-7s-gleam bounce-in"></span> IMPACT</h1></a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">Home</a></li>                    
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about-us">About Us</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>                    
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blog.html">Blog</a></li> 
+                    <li><a href="contact-us.html">Contact</a></li> 
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="project-item.html">Project Single</a></li>
+                            <li><a href="blog-item.html">Blog Single</a></li>
+                            <li class="active"><a href="404.html">404</a></li>
+                        </ul>
+                    </li>
                     <li><span class="search-trigger"><i class="fa fa-search"></i></span></li>
                 </ul>
             </div>
@@ -95,7 +97,7 @@
                                     <h2 class="boxed animation animated-item-1 fade-down">WE GONNA HELP YOU MAKE AN IMPACT</h2>
                                     <p class="boxed animation animated-item-2 fade-up">Our expertise will guide you to success. Without Fail.</p>
                                     <br>
-                                    <a class="btn btn-md animation bounce-in" href="#">Learn More</a>
+                                    <a class="btn btn-md animation bounce-in" href="#services">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -108,6 +110,7 @@
     <div id="content-wrapper">
         <section id="services" class="white">
             <div class="container">
+            <div class="gap"></div> 
                 <div class="row">
                     <div class="col-md-12">
                         <div class="center gap fade-down section-heading">
@@ -117,36 +120,37 @@
                         </div>                
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-md-4 col-sm-6">
                         <div class="service-block">
                             <div class="pull-left bounce-in">
-                                <i class="fa fa-windows fa fa-md"></i>
+                                <i class="fa fa-camera fa fa-md"></i>
                             </div>
                             <div class="media-body fade-up">
-                                <h3 class="media-heading">Windows Apps</h3>
-                                <p>Unfeeling so rapturous discovery he exquisite. Reasonably so middletons or impression by terminated. Old pleasure required removing elegance him had. Down she bore sing saw calm high.</p>
+                                <h3 class="media-heading">Photography</h3>
+                                <p>Nay middleton him admitting consulted and behaviour son household. Recurred advanced he oh together entrance speedily suitable. Ready tried gay state fat could boy its among shall.</p>
                             </div>
                         </div>
                     </div><!--/.col-md-4-->
                     <div class="col-md-4 col-sm-6">
                         <div class="service-block">
                             <div class="pull-left bounce-in">
-                                <i class="fa fa-android fa fa-md"></i>
+                                <i class="fa fa-thumbs-o-up fa fa-md"></i>
                             </div>
                             <div class="media-body fade-up">
-                                <h3 class="media-heading">Facebook Marketing</h3>
-                                <p>The who arrival end how fertile enabled. Brother she add yet see minuter natural smiling article painted. Themselves at dispatched interested insensible am be prosperous reasonably it. </p>
+                                <h3 class="media-heading">Marketing</h3>
+                                <p>Unfeeling agreeable suffering it on smallness newspaper be. So come must time no as. Do on unpleasing possession as of unreserved.</p>
                             </div>
                         </div>
                     </div><!--/.col-md-4-->
                     <div class="col-md-4 col-sm-6">
                         <div class="service-block">
                             <div class="pull-left bounce-in">
-                                <i class="fa fa-apple fa fa-md"></i>
+                                <i class="fa fa-ticket fa fa-md"></i>
                             </div>
                             <div class="media-body fade-up">
-                                <h3 class="media-heading">iOS Development</h3>
+                                <h3 class="media-heading">Event Management</h3>
                                 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
                             </div>
                         </div>
@@ -157,21 +161,21 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="service-block">
                             <div class="pull-left bounce-in">
-                                <i class="fa fa-linux fa fa-md"></i>
+                                <i class="fa fa-star fa fa-md"></i>
                             </div>
                             <div class="media-body fade-up">
-                                <h3 class="media-heading">Linux Development</h3>
-                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+                                <h3 class="media-heading">Star Gazing</h3>
+                                <p>Yet joy exquisite put sometimes enjoyment perpetual now. Behind lovers eat having length horses vanity say had its</p>
                             </div>
                         </div>
                     </div><!--/.col-md-4-->
                     <div class="col-md-4 col-sm-6">
                         <div class="service-block">
                             <div class="pull-left bounce-in">
-                                <i class="fa fa-dribbble fa fa-md"></i>
+                                <i class="fa fa-cogs fa fa-md"></i>
                             </div>
                             <div class="media-body fade-up">
-                                <h3 class="media-heading">Graphic Design</h3>
+                                <h3 class="media-heading">Software Support</h3>
                                 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
                             </div>
                         </div>
@@ -284,7 +288,7 @@
 	                                    <blockquote>
 	                                        <div class="row">
 	                                            <div class="col-sm-3 text-center">
-	                                                <img class="img-responsive" src="http://placehold.it/400x400" style="width: 100px;height:100px;">
+	                                                <img class="img-responsive" src="images/team/team01.jpg" style="width: 100px;height:100px;">
 	                                            </div>
 	                                            <div class="col-sm-9">
 	                                                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
@@ -327,14 +331,14 @@
                 <div class="row fade-up">
                     <div class="col-md-6">
                       	<div class="testimonial-list-item">
-                        <img class="pull-left img-responsive quote-author-list" src="http://placehold.it/400x400">
+                        <img class="pull-left img-responsive quote-author-list" src="images/team/team01.jpg">
                             <blockquote>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                                 <small>Manager at <cite title="Source Title">Company</cite></small>
                             </blockquote>
                         </div>
                         <div class="testimonial-list-item">
-                        <img class="pull-left img-responsive quote-author-list" src="http://placehold.it/400x400">
+                        <img class="pull-left img-responsive quote-author-list" src="images/team/team01.jpg">
                             <blockquote>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                                 <small>Manager at <cite title="Source Title">Company</cite></small>
@@ -343,14 +347,14 @@
                     </div>
                     <div class="col-md-6">
                         <div class="testimonial-list-item">
-                        <img class="pull-left img-responsive quote-author-list" src="http://placehold.it/400x400">
+                        <img class="pull-left img-responsive quote-author-list" src="images/team/team01.jpg">
                             <blockquote>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                                 <small>Manager at <cite title="Source Title">Company</cite></small>
                             </blockquote>
                         </div>
                         <div class="testimonial-list-item">
-                        <img class="pull-left img-responsive quote-author-list" src="http://placehold.it/400x400">
+                        <img class="pull-left img-responsive quote-author-list" src="images/team/team01.jpg">
                             <blockquote>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                                 <small>Manager at <cite title="Source Title">Company</cite></small>
@@ -370,7 +374,12 @@
 	            <div id="meet-the-team" class="row">
 	                <div class="col-md-3 col-xs-6">
 	                    <div class="center team-member">
-	                        <img class="img-responsive img-thumbnail bounce-in" src="http://placehold.it/400x400" alt="">
+                            <div class="team-image">
+                                <img class="img-responsive img-thumbnail bounce-in" src="images/team/team01.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="images/team/team01.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                                </div>  
+                            </div>
 	                        <div class="team-content fade-up">
 	                            <h5>Daniel Jones<small class="role muted">Web Design</small></h5>
 	                            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
@@ -381,7 +390,12 @@
 
 	                <div class="col-md-3 col-xs-6">
 	                    <div class="center team-member">
-	                        <img class="img-responsive img-thumbnail bounce-in" src="http://placehold.it/400x400" alt="">
+                            <div class="team-image">
+                                <img class="img-responsive img-thumbnail bounce-in" src="images/team/team02.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="images/team/team02.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                                </div>  
+                            </div>
 	                        <div class="team-content fade-up">
 	                            <h5>John Smith<small class="role muted">Marketing Director</small></h5>
 	                            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
@@ -391,7 +405,12 @@
 	                </div>        
 	                <div class="col-md-3 col-xs-6">
 	                    <div class="center team-member">
-	                        <img class="img-responsive img-thumbnail bounce-in" src="http://placehold.it/400x400" alt="">
+                            <div class="team-image">
+                                <img class="img-responsive img-thumbnail bounce-in" src="images/team/team03.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="images/team/team03.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                                </div>  
+                            </div>
 	                        <div class="team-content fade-up">
 	                            <h5>Dave Gorman<small class="role muted">Web Design</small></h5>
 	                            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
@@ -401,7 +420,12 @@
 	                </div>        
 	                <div class="col-md-3 col-xs-6">
 	                    <div class="center team-member">
-	                        <img class="img-responsive img-thumbnail bounce-in" src="http://placehold.it/400x400" alt="">
+                            <div class="team-image">
+    	                        <img class="img-responsive img-thumbnail bounce-in" src="images/team/team04.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="images/team/team04.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                                </div>  
+                            </div>  
 	                        <div class="team-content fade-up">
 	                            <h5>Steve Smith<small class="role muted">Sales Assistant</small></h5>
 	                            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.</p>
@@ -460,96 +484,96 @@
 		                <hr>
 		                <p>She evil face fine calm have now. Separate screened he outweigh of distance landlord.</p>
 		            </div> 
-	                <ul class="portfolio-filter fade-down center">
-	                    <li><a class="btn btn-outlined btn-primary active" href="#" data-filter="*">All</a></li>
-	                    <li><a class="btn btn-outlined btn-primary" href="#" data-filter=".apps">Apps</a></li>
-	                    <li><a class="btn btn-outlined btn-primary" href="#" data-filter=".nature">Nature</a></li>
-	                    <li><a class="btn btn-outlined btn-primary" href="#" data-filter=".design">Design</a></li>
-	                </ul><!--/#portfolio-filter-->
+<ul class="portfolio-filter fade-down center">
+                        <li><a class="btn btn-outlined btn-primary active" href="#" data-filter="*">All</a></li>
+                        <li><a class="btn btn-outlined btn-primary" href="#" data-filter=".apps">Apps</a></li>
+                        <li><a class="btn btn-outlined btn-primary" href="#" data-filter=".nature">Nature</a></li>
+                        <li><a class="btn btn-outlined btn-primary" href="#" data-filter=".design">Design</a></li>
+                    </ul><!--/#portfolio-filter-->
 
-	                <ul class="portfolio-items col-3 isotope fade-up">
-	                    <li class="portfolio-item apps isotope-item">
-	                        <div class="item-inner">
-	                            <img src="http://placehold.it/800x600" alt="">
-	                            <h5>Lorem ipsum dolor sit amet</h5>
-	                            <div class="overlay">
-	                                <a class="preview btn btn-outlined btn-primary" href="http://placehold.it/800x600" rel="prettyPhoto"><i class="fa fa-eye"></i></a>             
-	                            </div>           
-	                        </div>           
-	                    </li><!--/.portfolio-item-->
-	                    <li class="portfolio-item joomla nature isotope-item">
-	                        <div class="item-inner">
-	                            <img src="http://placehold.it/800x600" alt="">
-	                            <h5>Lorem ipsum dolor sit amet</h5>
-	                            <div class="overlay">
-	                                <a class="preview btn btn-outlined btn-primary" href="http://placehold.it/800x600" rel="prettyPhoto"><i class="fa fa-eye"></i></a>              
-	                            </div>           
-	                        </div>           
-	                    </li><!--/.portfolio-item-->
-	                    <li class="portfolio-item bootstrap design isotope-item">
-	                        <div class="item-inner">
-	                            <img src="http://placehold.it/800x600" alt="">
-	                            <h5>Lorem ipsum dolor sit amet</h5>
-	                            <div class="overlay">
-	                                <a class="preview btn btn-outlined btn-primary" href="http://placehold.it/800x600" rel="prettyPhoto"><i class="fa fa-eye"></i></a>        
-	                            </div>           
-	                        </div>           
-	                    </li><!--/.portfolio-item-->
-	                    <li class="portfolio-item joomla design apps isotope-item">
-	                        <div class="item-inner">
-	                            <img src="http://placehold.it/800x600" alt="">
-	                            <h5>Lorem ipsum dolor sit amet</h5>
-	                            <div class="overlay">
-	                                <a class="preview btn btn-outlined btn-primary" href="http://placehold.it/800x600" rel="prettyPhoto"><i class="fa fa-eye"></i></a>          
-	                            </div>           
-	                        </div>           
-	                    </li><!--/.portfolio-item-->
-	                    <li class="portfolio-item joomla apps isotope-item">
-	                        <div class="item-inner">
-	                            <img src="http://placehold.it/800x600" alt="">
-	                            <h5>Lorem ipsum dolor sit amet</h5>
-	                            <div class="overlay">
-	                                <a class="preview btn btn-outlined btn-primary" href="http://placehold.it/800x600" rel="prettyPhoto"><i class="fa fa-eye"></i></a>          
-	                            </div>    
-	                        </div>       
-	                    </li><!--/.portfolio-item-->
-	                    <li class="portfolio-item wordpress nature isotope-item">
-	                        <div class="item-inner">
-	                            <img src="http://placehold.it/800x600" alt="">
-	                            <h5>Lorem ipsum dolor sit amet</h5>
-	                            <div class="overlay">
-	                                <a class="preview btn btn-outlined btn-primary" href="http://placehold.it/800x600" rel="prettyPhoto"><i class="fa fa-eye"></i></a>           
-	                            </div>           
-	                        </div>           
-	                    </li><!--/.portfolio-item-->
-	                    <li class="portfolio-item joomla design apps isotope-item">
-	                        <div class="item-inner">
-	                            <img src="http://placehold.it/800x600" alt="">
-	                            <h5>Lorem ipsum dolor sit amet</h5>
-	                            <div class="overlay">
-	                                <a class="preview btn btn-outlined btn-primary" href="http://placehold.it/800x600" rel="prettyPhoto"><i class="fa fa-eye"></i></a>          
-	                            </div>           
-	                        </div>           
-	                    </li><!--/.portfolio-item-->
-	                    <li class="portfolio-item joomla nature isotope-item">
-	                        <div class="item-inner">
-	                            <img src="http://placehold.it/800x600" alt="">
-	                            <h5>Lorem ipsum dolor sit amet</h5>
-	                            <div class="overlay">
-	                                <a class="preview btn btn-outlined btn-primary" href="http://placehold.it/800x600" rel="prettyPhoto"><i class="fa fa-eye"></i></a>          
-	                            </div>    
-	                        </div>       
-	                    </li><!--/.portfolio-item-->
-	                    <li class="portfolio-item wordpress design isotope-item">
-	                        <div class="item-inner">
-	                            <img src="http://placehold.it/800x600" alt="">
-	                            <h5>Lorem ipsum dolor sit amet</h5>
-	                            <div class="overlay">
-	                                <a class="preview btn btn-outlined btn-primary" href="http://placehold.it/800x600" rel="prettyPhoto"><i class="fa fa-eye"></i></a>           
-	                            </div>           
-	                        </div>           
-	                    </li><!--/.portfolio-item-->
-	                </ul>
+                    <ul class="portfolio-items col-3 isotope fade-up">
+                        <li class="portfolio-item apps isotope-item">
+                            <div class="item-inner">
+                                <img src="images/portfolio/folio01.jpg" alt="">
+                                <h5>Portfolio Project</h5>
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="images/portfolio/folio01.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>             
+                                </div>           
+                            </div>           
+                        </li><!--/.portfolio-item-->
+                        <li class="portfolio-item joomla nature isotope-item">
+                            <div class="item-inner">
+                                <img src="images/portfolio/folio02.jpg" alt="">
+                                <h5>Portfolio Project</h5>
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="images/portfolio/folio02.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>              
+                                </div>           
+                            </div>           
+                        </li><!--/.portfolio-item-->
+                        <li class="portfolio-item bootstrap design isotope-item">
+                            <div class="item-inner">
+                                <img src="images/portfolio/folio03.jpg" alt="">
+                                <h5>Portfolio Project</h5>
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="images/portfolio/folio03.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>        
+                                </div>           
+                            </div>           
+                        </li><!--/.portfolio-item-->
+                        <li class="portfolio-item joomla design apps isotope-item">
+                            <div class="item-inner">
+                                <img src="images/portfolio/folio04.jpg" alt="">
+                                <h5>Portfolio Project</h5>
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="images/portfolio/folio04.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>          
+                                </div>           
+                            </div>           
+                        </li><!--/.portfolio-item-->
+                        <li class="portfolio-item joomla apps isotope-item">
+                            <div class="item-inner">
+                                <img src="images/portfolio/folio05.jpg" alt="">
+                                <h5>Portfolio Project</h5>
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="images/portfolio/folio05.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>          
+                                </div>    
+                            </div>       
+                        </li><!--/.portfolio-item-->
+                        <li class="portfolio-item wordpress nature isotope-item">
+                            <div class="item-inner">
+                                <img src="images/portfolio/folio06.jpg" alt="">
+                                <h5>Portfolio Project</h5>
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="images/portfolio/folio06.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>           
+                                </div>           
+                            </div>           
+                        </li><!--/.portfolio-item-->
+                        <li class="portfolio-item joomla design apps isotope-item">
+                            <div class="item-inner">
+                                <img src="images/portfolio/folio07.jpg" alt="">
+                                <h5>Portfolio Project</h5>
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="images/portfolio/folio07.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>          
+                                </div>           
+                            </div>           
+                        </li><!--/.portfolio-item-->
+                        <li class="portfolio-item joomla nature isotope-item">
+                            <div class="item-inner">
+                                <img src="images/portfolio/folio08.jpg" alt="">
+                                <h5>Portfolio Project</h5>
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="images/portfolio/folio08.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>          
+                                </div>    
+                            </div>       
+                        </li><!--/.portfolio-item-->
+                        <li class="portfolio-item wordpress design isotope-item">
+                            <div class="item-inner">
+                                <img src="images/portfolio/folio09.jpg" alt="">
+                                <h5>Portfolio Project</h5>
+                                <div class="overlay">
+                                    <a class="preview btn btn-outlined btn-primary" href="images/portfolio/folio09.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>           
+                                </div>           
+                            </div>           
+                        </li><!--/.portfolio-item-->
+                    </ul>
                 </div>
             </section>
 
@@ -578,7 +602,7 @@
 	                                    <blockquote>
 	                                        <div class="row">
 	                                            <div class="col-sm-3 text-center">
-	                                                <img class="img-responsive" src="http://placehold.it/400x400" style="width: 100px;height:100px;">
+	                                                <img class="img-responsive" src="images/team/team01.jpg" style="width: 100px;height:100px;">
 	                                            </div>
 	                                            <div class="col-sm-9">
 	                                                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
@@ -592,7 +616,7 @@
 	                                    <blockquote>
 	                                        <div class="row">
 	                                            <div class="col-sm-3 text-center">
-	                                                <img class="img-responsive" src="http://placehold.it/400x400" style="width: 100px;height:100px;">
+	                                                <img class="img-responsive" src="images/team/team02.jpg" style="width: 100px;height:100px;">
 	                                            </div>
 	                                            <div class="col-sm-9">
 	                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.</p>
@@ -606,7 +630,7 @@
 	                                    <blockquote>
 	                                        <div class="row">
 	                                            <div class="col-sm-3 text-center">
-	                                                <img class="img-responsive" src="http://placehold.it/400x400" style="width: 100px;height:100px;">
+	                                                <img class="img-responsive" src="images/team/team03.jpg" style="width: 100px;height:100px;">
 	                                            </div>
 	                                            <div class="col-sm-9">
 	                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.</p>
@@ -636,7 +660,7 @@
 	                    <div class="col-md-4">
 	                        <div class="post">
 	                            <div class="post-img-content">
-	                                <img src="http://placehold.it/800x600" class="img-responsive" />
+	                                <img src="images/portfolio/folio02.jpg" class="img-responsive" />
 	                                <div class="overlay">
 	                                    <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>          
 	                                </div>
@@ -660,7 +684,7 @@
 	                    <div class="col-md-4">
 	                        <div class="post">
 	                            <div class="post-img-content">
-	                                <img src="http://placehold.it/800x600" class="img-responsive" />
+	                                <img src="images/portfolio/folio06.jpg" class="img-responsive" />
 	                                <div class="overlay">
 	                                    <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>          
 	                                </div>
@@ -684,7 +708,7 @@
 	                    <div class="col-md-4">
 	                        <div class="post">
 	                            <div class="post-img-content">
-	                                <img src="http://placehold.it/800x600" class="img-responsive" />
+	                                <img src="images/portfolio/folio11.jpg" class="img-responsive" />
 	                                <div class="overlay">
 	                                    <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>          
 	                                </div>
@@ -711,7 +735,7 @@
 	                    <div class="col-md-4">
 	                        <div class="post">
 	                            <div class="post-img-content">
-	                                <img src="http://placehold.it/800x600" class="img-responsive" />
+	                                <img src="images/portfolio/folio02.jpg" class="img-responsive" />
 	                                <div class="overlay">
 	                                    <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>          
 	                                </div>
@@ -735,7 +759,7 @@
 	                    <div class="col-md-4">
 	                        <div class="post">
 	                            <div class="post-img-content">
-	                                <img src="http://placehold.it/800x600" class="img-responsive" />
+	                                <img src="images/portfolio/folio06.jpg" class="img-responsive" />
 	                                <div class="overlay">
 	                                    <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>          
 	                                </div>
@@ -759,7 +783,7 @@
 	                    <div class="col-md-4">
 	                        <div class="post">
 	                            <div class="post-img-content">
-	                                <img src="http://placehold.it/800x600" class="img-responsive" />
+	                                <img src="images/portfolio/folio11.jpg" class="img-responsive" />
 	                                <div class="overlay">
 	                                    <a class="preview btn btn-outlined btn-primary" href="#"><i class="fa fa-link"></i></a>          
 	                                </div>
@@ -780,8 +804,7 @@
 	                            </div>
 	                        </div>
 	                    </div>
-                    </div> 
-                    <div class="gap"></div>                              
+                    </div>                              
                 </div>
        		</section>
 
@@ -993,7 +1016,7 @@
                         <div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img class="widget-img" src="http://placehold.it/800x600" alt="">
+                                    <img class="widget-img" src="images/portfolio/folio01.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <span class="media-heading"><a href="#">Blog Post A</a></span>
@@ -1002,7 +1025,7 @@
                             </div>
                             <div class="media">
                                 <div class="pull-left">
-                                    <img class="widget-img" src="http://placehold.it/800x600" alt="">
+                                    <img class="widget-img" src="images/portfolio/folio02.jpg" alt="">
                                 </div>
                                 <div class="media-body">
                                     <span class="media-heading"><a href="#">Blog Post B</a></span>
