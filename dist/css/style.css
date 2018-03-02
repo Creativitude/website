@@ -1028,7 +1028,7 @@ ul.tag-cloud li {
     line-height: 68px;
     color: #fff;
     margin-right: 15px;
-    background-color: #00b29e;
+    background-color: #0099cc; /* #00b29e; template style */
     text-align: center;
     display: block;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 1);
@@ -1040,8 +1040,8 @@ ul.tag-cloud li {
 
 .service-block:hover .fa-md {
     background: transparent;
-    color: #00b29e;
-    box-shadow: 0 0 0 4px #00b29e;
+    color: #0099cc;
+    box-shadow: 0 0 0 4px #0099cc;
 }
 
 .service-block .media-heading {
