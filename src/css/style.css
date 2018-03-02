@@ -1610,15 +1610,15 @@ img.author-box-image {
 
 .btn-outlined.btn-primary {
     background: none;
-    border: 2px solid #00b29e;
-    color: #00b29e;
+    border: 2px solid #003399;
+    color: #003399;
 }
 
 .btn-outlined.btn-primary:hover,
 .btn-outlined.btn-primary:active {
     color: #FFF;
-    background: #00b29e;
-    border-color: #00b29e: ;
+    background: #003399;
+    border-color: #003399 ;
 }
 
 .btn-outlined.btn-success {
@@ -1996,7 +1996,7 @@ img.author-box-image {
 }
 
 .testimonial-list-item:hover blockquote {
-    border-left: 4px solid #00b29e;
+    border-left: 4px solid #003399;
 }
 
 .quote-author-list {
