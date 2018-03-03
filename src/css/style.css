@@ -277,8 +277,8 @@ blockquote {
 
 .portfolio-filter > li a.active {
     color: #FFF;
-    background: #00b29e;
-    border: 2px solid #00b29e;
+    background: #3377ff;
+    border: 2px solid #3377ff;
 }
 
 .portfolio-items > li {
@@ -351,7 +351,7 @@ blockquote {
     -o-transition: all .5s ease-in-out;
     -ms-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-    border-bottom: 4px solid #00b29e;
+    border-bottom: 4px solid #3377ff;
 }
 
 .portfolio-item h5:after {
@@ -492,7 +492,7 @@ div.pp_overlay {
     border-radius: 0;
     list-style: none;
     margin: 0 0 20px;
-    background: #00b29e;
+    background: #3377ff;
     text-align: center;
     padding: 30px 0;
 }
@@ -894,7 +894,7 @@ ul.tag-cloud li {
 
 .team-member:hover .img-thumbnail {
     background: transparent;
-    background-color: #00b29e;
+    background-color: #3377ff;
 }
 
 .team-member .img-thumbnail {
@@ -1028,7 +1028,7 @@ ul.tag-cloud li {
     line-height: 68px;
     color: #fff;
     margin-right: 15px;
-    background-color: #003399; /* #00b29e; template style */
+    background-color: #3377ff; /* #3377ff; template style */
     text-align: center;
     display: block;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 1);
@@ -1040,8 +1040,8 @@ ul.tag-cloud li {
 
 .service-block:hover .fa-md {
     background: transparent;
-    color: #003399;
-    box-shadow: 0 0 0 4px #003399;
+    color: #3377ff;
+    box-shadow: 0 0 0 4px #3377ff;
 }
 
 .service-block .media-heading {
@@ -1233,7 +1233,7 @@ ul.rss li::before {
 
 #footer a:hover,
 #footer-wrapper a:hover {
-    color: #00b29e;
+    color: #3377ff;
 }
 
 #footer ul {
@@ -1610,15 +1610,15 @@ img.author-box-image {
 
 .btn-outlined.btn-primary {
     background: none;
-    border: 2px solid #00b29e;
-    color: #00b29e;
+    border: 2px solid #3377ff;
+    color: #3377ff;
 }
 
 .btn-outlined.btn-primary:hover,
 .btn-outlined.btn-primary:active {
     color: #FFF;
-    background: #00b29e;
-    border-color: #00b29e: ;
+    background: #3377ff;
+    border-color: #3377ff ;
 }
 
 .btn-outlined.btn-success {
@@ -1677,7 +1677,7 @@ img.author-box-image {
 
 .btn-outlined.btn-white:hover,
 .btn-outlined.btn-white:active {
-    color: #00b29e;
+    color: #3377ff;
     background: #fff;
 }
 
@@ -1908,7 +1908,7 @@ img.author-box-image {
 }
 
 .tile-progress.tile-cyan .tile-footer {
-    background: #00b29e;
+    background: #3377ff;
     color: #fff;
 }
 
@@ -1996,7 +1996,7 @@ img.author-box-image {
 }
 
 .testimonial-list-item:hover blockquote {
-    border-left: 4px solid #00b29e;
+    border-left: 4px solid #3377ff;
 }
 
 .quote-author-list {
