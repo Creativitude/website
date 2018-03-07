@@ -58,17 +58,17 @@ gulp.task('mincss', function() {
 //optimize and copy bg images to production/images
 gulp.task('bgImage', () =>
 	gulp.src('src/images/bg/*')
-    .pipe(imagemin([
-        imagemin.gifsicle({interlaced: true}),
-        imagemin.jpegtran({progressive: true}),
-        imagemin.optipng({optimizationLevel: 5}),
-        imagemin.svgo({
-            plugins: [
-                {removeViewBox: true},
-                {cleanupIDs: false}
-            ]
-        })
-    ]))
+    // .pipe(imagemin([
+    //     imagemin.gifsicle({interlaced: true}),
+    //     imagemin.jpegtran({progressive: true}),
+    //     imagemin.optipng({optimizationLevel: 5}),
+    //     imagemin.svgo({
+    //         plugins: [
+    //             {removeViewBox: true},
+    //             {cleanupIDs: false}
+    //         ]
+    //     })
+    // ]))
 	.pipe(gulp.dest('dist/images/bg'))
 );
 

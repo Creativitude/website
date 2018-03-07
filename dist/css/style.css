@@ -224,7 +224,8 @@ blockquote {
     font-size: 78px;
     margin: 100px auto 0;
     position: relative;
-    width: 80px;
+    width: 100px;
+    height:100px;
     -webkit-transform: rotate(15deg);
     -moz-transform: rotate(15deg);
     -o-transform: rotate(15deg);
