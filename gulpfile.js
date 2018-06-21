@@ -26,6 +26,16 @@ gulp.task('scripts', function() {
     gulp.src('src/js/custom/*.js')
         .pipe(concat('main.js'))
         .pipe(uglify())
+        .pipe(gulp.dest('dist/js/custom'));
+});
+
+gulp.task('js', function() {
+    gulp.src('src/js/*.js')
+        .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('minjs', function() {
+    gulp.src('src/js/*.min.js')
         .pipe(gulp.dest('dist/js'));
 });
 
@@ -34,24 +44,32 @@ gulp.task('css', function() {
     gulp.src('src/css/custom/*.css')
         .pipe(concat('main.css'))
         .pipe(uglify())
+        .pipe(gulp.dest('dist/css/custom'));
+});
+gulp.task('default_css', function() {
+    gulp.src('src/css/*.css')
+        .pipe(gulp.dest('dist/css'));
+});
+gulp.task('mincss', function() {
+    gulp.src('src/css/*.min.css')
         .pipe(gulp.dest('dist/css'));
 });
 
 //optimize and copy bg images to production/images
 gulp.task('bgImage', () =>
 	gulp.src('src/images/bg/*')
-    .pipe(imagemin([
-        imagemin.gifsicle({interlaced: true}),
-        imagemin.jpegtran({progressive: true}),
-        imagemin.optipng({optimizationLevel: 5}),
-        imagemin.svgo({
-            plugins: [
-                {removeViewBox: true},
-                {cleanupIDs: false}
-            ]
-        })
-    ]))
-	.pipe(gulp.dest('dist/images'))
+    // .pipe(imagemin([
+    //     imagemin.gifsicle({interlaced: true}),
+    //     imagemin.jpegtran({progressive: true}),
+    //     imagemin.optipng({optimizationLevel: 5}),
+    //     imagemin.svgo({
+    //         plugins: [
+    //             {removeViewBox: true},
+    //             {cleanupIDs: false}
+    //         ]
+    //     })
+    // ]))
+	.pipe(gulp.dest('dist/images/bg'))
 );
 
 
@@ -69,7 +87,7 @@ gulp.task('logo', () =>
             ]
         })
     ]))
-	.pipe(gulp.dest('dist/images'))
+	.pipe(gulp.dest('dist/images/logo'))
 );
 
 
@@ -87,7 +105,7 @@ gulp.task('overlays', () =>
             ]
         })
     ]))
-	.pipe(gulp.dest('dist/images'))
+	.pipe(gulp.dest('dist/images/overlays'))
 );
 
 
@@ -105,7 +123,7 @@ gulp.task('portfolio', () =>
             ]
         })
     ]))
-	.pipe(gulp.dest('dist/images'))
+	.pipe(gulp.dest('dist/images/portfolio'))
 );
 
 
@@ -123,7 +141,7 @@ gulp.task('prettyPhoto', () =>
             ]
         })
     ]))
-	.pipe(gulp.dest('dist/images'))
+	.pipe(gulp.dest('dist/images/prettyPhoto'))
 );
 
 
@@ -141,7 +159,7 @@ gulp.task('team', () =>
             ]
         })
     ]))
-	.pipe(gulp.dest('dist/images'))
+	.pipe(gulp.dest('dist/images/team'))
 );
 
 
@@ -166,7 +184,11 @@ gulp.task('img', () =>
 //watch for the above functions when files are saved
 gulp.task('watch', function() {
     gulp.watch('src/js/custom/*.js', ['scripts']);
+    gulp.watch('src/js/*.js', ['js']);
+    gulp.watch('src/js/*.min.js', ['minjs']);
     gulp.watch('src/css/custom/*.css', ['css']);
+    gulp.watch('src/css/*.css', ['default_css']);
+    gulp.watch('src/css/*.min.css', ['mincss']);
     gulp.watch('src/images/bg/*', ['bgImage']);
     gulp.watch('src/images/logo/*', ['logo']);
     gulp.watch('src/images/overlays/*', ['overlays']);
@@ -178,4 +200,4 @@ gulp.task('watch', function() {
 });
 
 
-gulp.task('default', ['scripts','css','bgImage','logo','overlays','portfolio','team','prettyPhoto','img','copyHtml']);
+gulp.task('default', ['scripts','js','minjs','css','default_css','mincss','bgImage','logo','overlays','portfolio','team','prettyPhoto','img','copyHtml']);
